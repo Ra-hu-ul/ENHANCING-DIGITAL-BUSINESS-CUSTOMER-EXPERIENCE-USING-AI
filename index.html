@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ShopAssist AI - advanced B2C e-commerce customer experience chatbot prototype">
+<title>ShopAssist AI | E-commerce Customer Experience</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">AI</div><div><b>ShopAssist</b><span>Customer Experience AI</span></div></div>
+    <div class="research-badge">RESEARCH PROTOTYPE</div>
+    <nav>
+      <button class="nav-btn active" data-view="chat">💬 Chat</button>
+      <button class="nav-btn" data-view="orders">📦 Orders</button>
+      <button class="nav-btn" data-view="products">🛍️ Products</button>
+      <button class="nav-btn" data-view="insights">📊 CX Insights</button>
+    </nav>
+    <div class="sidebar-note">
+      <b>Privacy-first demo</b>
+      <p>No passwords, payment details or sensitive personal information are requested or stored.</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section id="chatView" class="view active">
+      <header class="topbar">
+        <div><h1>AI Customer Support</h1><p><span class="online"></span> Available instantly · Human escalation supported</p></div>
+        <button id="clearBtn" class="ghost">Clear chat</button>
+      </header>
+      <div class="trust-banner"><b>Transparent AI:</b> I’m a research demonstration chatbot. I can provide guidance, but complex, sensitive or uncertain cases should be escalated to a human agent.</div>
+      <div id="messages" class="messages" aria-live="polite"></div>
+      <div id="quick" class="quick"></div>
+      <form id="chatForm" class="composer">
+        <label class="sr-only" for="userInput">Message</label>
+        <input id="userInput" autocomplete="off" placeholder="Ask about products, orders, returns, privacy…" />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <section id="ordersView" class="view">
+      <header class="topbar"><div><h1>Order Support</h1><p>Demonstration order data only</p></div></header>
+      <div class="panel-grid">
+        <div class="panel"><h2>Track an order</h2><p>Use a demo order number such as <b>SA-1001</b> or <b>SA-1002</b>.</p>
+          <div class="inline"><input id="orderInput" placeholder="SA-1001"><button id="trackBtn">Track</button></div>
+          <div id="orderResult" class="result"></div>
+        </div>
+        <div class="panel"><h2>Service options</h2><div class="option"><b>AI support</b><span>Instant guidance for routine questions</span></div><div class="option"><b>Human support</b><span>Recommended for complex or sensitive cases</span></div></div>
+      </div>
+    </section>
+
+    <section id="productsView" class="view">
+      <header class="topbar"><div><h1>Product Assistant</h1><p>Compare products using transparent demo attributes</p></div></header>
+      <div id="productCards" class="product-grid"></div>
+    </section>
+
+    <section id="insightsView" class="view">
+      <header class="topbar"><div><h1>CX Insights</h1><p>Prototype interaction metrics for demonstration</p></div></header>
+      <div class="metrics">
+        <div class="metric"><span>Messages</span><b id="metricMessages">0</b></div>
+        <div class="metric"><span>Frustration detected</span><b id="metricAnger">0</b></div>
+        <div class="metric"><span>Human escalations</span><b id="metricEscalations">0</b></div>
+        <div class="metric"><span>Helpful ratings</span><b id="metricHelpful">0</b></div>
+      </div>
+      <div class="panel"><h2>Research alignment</h2>
+        <div class="alignment"><b>H1 · PEOU → Satisfaction</b><span>Simple navigation, quick actions and plain-language responses.</span></div>
+        <div class="alignment"><b>H2 · PU → Satisfaction</b><span>Order, returns and product-support functions provide practical usefulness.</span></div>
+        <div class="alignment"><b>H3 · Trust → Purchase decisions</b><span>Transparency, privacy guidance and human escalation are surfaced explicitly.</span></div>
+        <div class="alignment"><b>H4 · Response speed → Comfort</b><span>Rapid simulated responses reduce waiting and demonstrate instant support.</span></div>
+      </div>
+      <div class="panel"><h2>Important interpretation</h2><p>These metrics describe the prototype's interactions only. They do <b>not</b> statistically test the dissertation hypotheses and must not be presented as research findings.</p></div>
+    </section>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
